@@ -1,0 +1,253 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    z-index: 2;
+    position: sticky; 
+    top: 0;
+}
+
+
+img{
+    width: 100px;
+    height: 100px;
+    /*center*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* imgae rond*/
+    border-radius: 50%;
+    /*shadow*/
+    box-shadow: 4px 2px 5px #63ADCF;
+
+}
+body{
+    background: LightGray;
+    height:100%;
+    width: 100%;
+    max-width: 1000px;
+
+    /*center*/
+    margin: auto;
+    display: block;
+    text-align: center;
+
+}
+
+form{
+
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 10px 5px 5px 5px #63ADCF;
+    padding: 50px;
+    background: white;
+
+    /*center*/
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+
+}
+form div {
+    padding: 1em;
+    background: #fff;
+    border: 1px ;
+    border-radius: 4px;
+
+}
+from input{
+    flex: 1;
+    display: block;
+    min-width: 0;
+}
+input{
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* :) */
+
+    width: 40%;
+    padding: 12px;
+    margin-left: 0px;
+    margin-bottom: 12px;
+    text-align: left;
+
+
+
+}
+input[type="text"],input[type="email"] {
+
+    border: none;
+    border-bottom: 1px solid #63ADCF;
+}
+/*required*/
+input:required:invalid{
+    border-color: red;
+}
+
+select{
+
+    width: 40%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+
+}
+
+
+button{
+    width: 15%;
+    margin: 10px;
+    padding: .5em 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 3px 3px 3px 3px #63ADCF;
+    font-size:  0.8em;
+    min-width: 50px;
+    max-width: 300px;
+
+}
+
+
+button:hover{
+    background-color: gray;
+}
+
+label{
+
+    width: 15%;
+    margin-right: 2em;
+    text-align: right;
+
+}
+
+
+@media (max-width: 800px) {
+    form {
+        flex-direction: column;
+
+    }
+    form p {
+        display: block;
+    }
+    label {
+        display: block;
+        width: auto;
+        text-align: left;
+    }
+    form div {
+        width: auto;
+    }
+
+    input,select {
+        width : 100%
+    }
+
+    button{
+        width: 25%;
+        font-size: .7em;
+    }
+
+}
+
+
+/*CSS pour le tableau */
+
+table {
+    width: 100%;
+    border: 1px solid white;
+    border-collapse: collapse;
+    box-shadow: 10px 5px 5px 5px #63ADCF;
+    table-layout: fixed;
+    padding: 0;
+    margin-bottom: 30px;
+
+}
+
+table caption {
+    font-size: 30px;
+    margin: 8px 0 12px;
+}
+
+table tr {
+    background-color: white;
+    border: 1px solid ghostwhite;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: start;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid ghostwhite;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid ghostwhite;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+form {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+

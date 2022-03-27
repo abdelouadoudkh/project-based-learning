@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="tp1.css">
+    <script type="text/javascript" src="tp1.js"></script>
+    <meta charset="utf-8">
+    <title>Step1</title>
+</head>
+
+<header>
+    <br>
+    <img src="image/space.jpg" alt="erreur 404" id="logo"><br>
+
+    <form action="#" id="formulaire">
+        <div>
+
+            <p>
+                <label for="prenom">Prenom</label>
+                <input type="text" placeholder="prenom" id="prenom" required>
+            </p>
+
+            <p>
+                <label for="nom" style="margin-left: 12px;">Nom</label>
+                <input type="text" placeholder="nom" id="nom" required style="margin-left: 9px;">
+            </p>
+
+            <p>
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="email" id="email" required style="margin-left: 8px;">
+            </p>
+
+            <p>
+                <label for="role">Role</label>
+                <select name="role" id="role">
+
+                    <option value="enseignant">enseignant</option>
+                    <option value="étudiant">étudiant</option>
+
+                </select>
+            </p>
+
+            <p>
+                <button type="submit" onclick="generate_table()" id="nbutton">Ajouter</button>
+                <button onclick="Supprimer()">Supprimer</button>
+                <button id="rotation">Rotation</button>
+            </p>
+
+
+        </div>
+    </form>
+
+
+</header>
+
+
+
+<body onload="declenche()" id="body">
+
+    <main>
+        <br>
+        <table id="tableau">
+            <caption>List</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                </tr>
+            </thead>
+            <tbody id="menu">
+
+            </tbody>
+        </table>
+
+    </main>
+
+
+</body>
+</html>
