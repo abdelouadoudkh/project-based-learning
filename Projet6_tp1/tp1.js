@@ -1,62 +1,4 @@
-
-
-
-    function generate_table() {
-    var prenom = document.getElementById("prenom").value;
-    var nom = document.getElementById("nom").value;
-    var email = document.getElementById("email").value;
-    var role = document.getElementById("role").value;
-
-    if (prenom == "secret") {
-    alert("Secret Action Discovered");
-    secretAction();
-}
-
-    var tbl = document.getElementById("tableau");
-    var tblBody = document.getElementById("menu");
-
-    if (prenom == "" || nom == "" || email == "") {
-    alert("Champ vide !");
-    return false;
-} else {
-    var row = document.createElement("tr");
-
-    var cell = document.createElement("td");
-    cell.setAttribute('data-label', 'Prenom');
-    var cellText = document.createTextNode(prenom);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
-
-    var cell = document.createElement("td");
-    cell.setAttribute('data-label', 'Nom');
-    var cellText = document.createTextNode(nom);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
-
-    var cell = document.createElement("td");
-    cell.setAttribute('data-label', 'Email');
-    var cellText = document.createTextNode(email);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
-
-    var cell = document.createElement("td");
-    cell.setAttribute('data-label', 'Role');
-    var cellText = document.createTextNode(role);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
-
-    tblBody.appendChild(row);
-
-    // put the <tbody> in the <table>
-    tbl.appendChild(tblBody);
-    // appends <table> into <body>
-    body.appendChild(tbl);
-}
-
-}
-
-
-    function c() {
+ function c() {
         var tableau = document.getElementById('tableau');
         var Ltableau = tableau.rows.length;
 
@@ -155,3 +97,66 @@
 
 
 }
+
+
+
+
+
+
+
+    function generate_table() {
+    var prenom = document.getElementById("prenom").value;
+    var nom = document.getElementById("nom").value;
+    var email = document.getElementById("email").value;
+    var role = document.getElementById("role").value;
+
+    if (prenom == "secret") {
+    alert("Secret Action Discovered");
+    secretAction();
+}
+
+    var tbl = document.getElementById("tableau");
+    var tblBody = document.getElementById("menu");
+
+    if (prenom == "" || nom == "" || email == "") {
+    alert("Champ vide !");
+    return false;
+} else {
+    var row = document.createElement("tr");
+
+    var cell = document.createElement("td");
+    cell.setAttribute('data-label', 'Prenom');
+    var cellText = document.createTextNode(prenom);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+
+    var cell = document.createElement("td");
+    cell.setAttribute('data-label', 'Nom');
+    var cellText = document.createTextNode(nom);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+
+    var cell = document.createElement("td");
+    cell.setAttribute('data-label', 'Email');
+    var cellText = document.createTextNode(email);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+
+    var cell = document.createElement("td");
+    cell.setAttribute('data-label', 'Role');
+    var cellText = document.createTextNode(role);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+
+    tblBody.appendChild(row);
+
+    // put the <tbody> in the <table>
+    tbl.appendChild(tblBody);
+    // appends <table> into <body>
+    body.appendChild(tbl);
+}
+
+}
+
+
+   
